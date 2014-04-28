@@ -1,0 +1,3 @@
+% require "./components.rb"
+components = <% $components.each do|x| %><%= x %>.analyze <% end %>
+test.analyze: components.analyze $(components)
