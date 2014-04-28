@@ -2,9 +2,11 @@ VHDL signal samples
 ====
 
 ## 概要
-クロックの立ち上がり時に、入力a, bに対して、cに「if b = 1 then a else not a」=「a xor (not b)」を出力するVHDLのコンポーネントのサンプル集です。if, case, when, selectや、functionとprocedure、process文の使い方の例文集みたいな感じです。
+if, case, when, selectや、functionとprocedure、process文の使い方の例文集です。
+クロックの立ち上がり時に、入力a, bに対して、cに「if b = 1 then a else not a」=「a xor (not b)」を出力するVHDLのコンポーネントを、いろいろな書き方で書いてみた、という感じです。
 
 以下は全て、「a xor (not b)」を計算してtempに代入しておき、clkの立ち上がりでtempをcに代入して出力する、という全く同じ動作をするコードです。
+entity宣言とcycleプロセスは共通なので、各ファイル真ん中の数〜十数行を見て下さい。
 
 1. concurrent_when.vhd
 	* whenを使った最もシンプルな書き方。
