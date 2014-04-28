@@ -17,4 +17,4 @@ Dependfile: Dependfile.erb components.rb
 clean:
 	rm -rf *.cf
 	rm Dependfile
-	for f in *.erb.vhd; do rm -f ${f%.erb.vhd}.vhd; done
+	for f in *.erb.vhd; do rm -f $${f%.erb.vhd}.vhd; done
